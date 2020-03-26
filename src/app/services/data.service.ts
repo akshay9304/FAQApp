@@ -4,7 +4,7 @@ import { Questions } from "../models/questions";
   providedIn: 'root'
 })
 export class DataService {
-  questions:Questions[];
+  public questions;
   constructor() {
     this.questions = [{
       text: 'what is your name?',
@@ -30,6 +30,10 @@ export class DataService {
 
    getQuestions() {
      return this.questions;
+   }
+
+   addQuestion(question:Questions){
+     this.questions.push(question);
    }
 }
  

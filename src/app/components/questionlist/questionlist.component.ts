@@ -18,4 +18,8 @@ export class QuestionlistComponent implements OnInit {
     this.questions = this.data.getQuestions();
   }
 
+  addQuestion(question:Questions) {
+    this.data.addQuestion(question);
+  }
+
 }
